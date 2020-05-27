@@ -30,15 +30,15 @@ function inputLength() {
 	if (person.value.length > 0 && age.value.length > 0) {
 	return true;} else {return false;}};
 
-function changeEnterButton() {
-	if (inputLength() === true) {console.log('enter')}
-	}
+// function changeEnterButton() {
+// 	if (inputLength() === true) {console.log('enter')}
+// 	}
 
 function charCount() {
 	if (person.value.length > 0 && age.value.length > 0)
 		{enter.classList.add('done')} 
 	else if (person.value.length === 0 || age.value.length === 0)
-		{enter.classList.remove('done')};
+		{enter.classList.remove('done')}
 }
 
 person.addEventListener('keyup', charCount);
@@ -56,6 +56,7 @@ function howYouDied() {
 	yearhtml.textContent = "Year of death: "+yearDeath;
 	person.value = '';
 	age.value = '';
+	enter.classList.remove('done');
 };
 
 function checkInput(){
